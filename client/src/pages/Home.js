@@ -1,8 +1,14 @@
 import React from 'react';
-
+import OurTeam from '../components/OurTeam';
+import Footer from '../components/Footer';
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <OurTeam/>
+      <Footer/>
+      </div>
+
+
   );
 };
 
