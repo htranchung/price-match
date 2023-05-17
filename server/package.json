@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^0.1.5",
+    "dotenv": "^16.0.3",
+    "langchain": "^0.0.75"
+  }
 }
