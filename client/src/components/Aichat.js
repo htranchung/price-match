@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Aichat = () => {
   return (
-    <div>Aichat</div>
+    <div>
+      <div id="chat_container"></div>
+    </div>
   );
 };
 
