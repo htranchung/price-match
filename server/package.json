@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "@pinecone-database/pinecone": "^0.1.5",
+    "d3-dsv": "^2.0.0",
     "dotenv": "^16.0.3",
-    "langchain": "^0.0.75"
+    "langchain": "^0.0.75",
+    "pdf-parse": "^1.1.1"
   }
 }
