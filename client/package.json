@@ -15,7 +15,9 @@
     "@react-three/fiber": "^8.11.5",
     "framer-motion": "^10.0.1",
     "maath": "^0.5.2",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "jwt-decode": "^3.1.2",
+    "@apollo/client": "^3.5.8"
   },
   "scripts": {
     "start": "react-scripts start",
