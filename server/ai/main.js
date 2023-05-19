@@ -21,7 +21,7 @@ const docs = await loader.load();
 
 const question =
   "List all consoles available at target? list them in a table format, by price.";
-
+  
 /*********************ASK QUESTION HERE*************************************/
 
 const indexName = "test-pine";
