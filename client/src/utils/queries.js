@@ -1,23 +1,26 @@
-import { gql } from '@apollo/client';
+const { gql } = require('@apollo/client');
 
-export const QUERY_USER = gql`
+const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {
       _id
       username
       email
-    
     }
   }
 `;
 
-export const QUERY_ME = gql`
+const QUERY_ME = gql`
   query me {
     me {
       _id
       username
       email
-     
     }
   }
 `;
+
+module.exports = {
+  QUERY_USER,
+  QUERY_ME
+};
