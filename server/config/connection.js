@@ -1,6 +1,7 @@
+
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/(replace with our DB name here)');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/price-match');
 
 
 
