@@ -42,7 +42,7 @@ const Login = (props) => {
   };
 
   return (
-    <div id='loginPage' className="gradient-form min-h-screen bg-gradient-to-bl from-[#5228F5] to-[#392B43]  dark:bg-neutral-700">
+    <div className="gradient-form min-h-screen bg-gradient-to-bl from-[#5228F5] to-[#392B43]  dark:bg-neutral-700">
       <div className="container flex items-center  justify-center h-screen p-10">
         <div className="grid grid-cols-1 gap-1 md:grid-cols-2">
           <div className="flex flex-col justify-center items-center px-4 py-6 bg-gradient-to-tr from-[#241868] to-[#392B43] rounded-lg shadow-lg dark:bg-neutral-800">
