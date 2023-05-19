@@ -1,4 +1,5 @@
 import decode from 'jwt-decode';
+import bcrypt from 'bcryptjs';
 
 class AuthService {
   getProfile() {
@@ -25,6 +26,15 @@ class AuthService {
 
   getToken() {
     return localStorage.getItem('id_token');
+  }
+
+  encryptPassword(password) {
+    const salt = bcrypt.genSaltSync(10);
+    return bcrypt.hashSync(password, salt);
+  }
+
+  validatePassword(password, encryptedPassword) {
+    return bcrypt.compareSync(password, encryptedPassword);
   }
 
   login(idToken) {
