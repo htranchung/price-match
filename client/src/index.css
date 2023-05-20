@@ -467,6 +467,25 @@ footer {
     object-fit: contain;
 }
 
+.p1 {
+  color: rgb(255, 255, 255);
+  font-size: 72px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  line-height: 80px;
+  margin-top: 100px;
+}
+
+.p2 {
+  color: rgb(238, 233, 254);
+  font-size: 20px;
+  max-width: 600px;
+  margin-top: 16px;
+  text-align: center;
+  line-height: 30px;
+}
+
 @media (max-width: 1114px) {
     .card img {
         display: none;
