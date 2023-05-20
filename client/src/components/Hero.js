@@ -1,26 +1,46 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { slideIn } from "../utils/motion";
-import RobotImg from '../assets/Robot.png';
 import RobotCanvas from "./canvas/Robot";
-import { Link } from 'react-router-dom';
+import { MeshDistortMaterial, Sphere, OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 const Hero = () => {
-  return <div className="heroSection">
-    <p className="p1">
-      An AI Tool for Your Shopping List
-    </p>
-    <p className="p2">
-      Find the best price for all your shopping needs
-    </p>
-    <Link to='SearchPage'>
-    <button type="button" className="tryButton focus:ring-4 focus:outline-none font-medium rounded-3xl text-sm px-4 py-2 text-center mr-3 md:mr-0">Try Pricema AI</button>
-    </Link>
-    <img
-      alt="Robot Image"
-      src={RobotImg}
-    />
-  </div>;
+  return (
+    <section id="hero">
+      <div className="heroSection wrapper">
+        <div className="left-hero-container">
+          <h1 className="title">A TOOL FOR ALL YOUR SHOPPING NEEDS</h1>
+          <p className="subtitle">
+            Finally a tool to find the best price for all your shopping needs.
+            Simply, type the product you are looking and let Pricema AI do the
+            work for you.
+          </p>
+          <button
+            type="button"
+            className="try-btn focus:outline-none font-medium rounded-3xl mr-3 md:mr-0">
+            Try Pricema AI
+          </button>
+        </div>
+        <div className="right-hero-container">
+          <div className="robot-container">
+            <RobotCanvas className="robot-img" />
+          </div>
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[1, 100, 100]} scale={2.2}>
+              <MeshDistortMaterial
+                color="#0524ff"
+                attach="material"
+                distort={0.5}
+                speed={1}
+              />
+            </Sphere>
+          </Canvas>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
