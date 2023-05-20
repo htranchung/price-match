@@ -1,6 +1,11 @@
 import React from "react";
 import RobotCanvas from "./canvas/Robot";
-import { MeshDistortMaterial, Sphere, OrbitControls } from "@react-three/drei";
+import {
+  MeshDistortMaterial,
+  Sphere,
+  OrbitControls,
+  useFont,
+} from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 const Hero = () => {
@@ -8,7 +13,11 @@ const Hero = () => {
     <section id="hero">
       <div className="heroSection wrapper">
         <div className="left-hero-container">
-          <h1 className="title">A TOOL FOR ALL YOUR SHOPPING NEEDS</h1>
+          <h1 className="title">
+            PRICEMA <span>AI.</span>
+            <br />
+            A TOOLKIT FOR ALL YOUR SHOPPING NEEDS
+          </h1>
           <p className="subtitle">
             Finally a tool to find the best price for all your shopping needs.
             Simply, type the product you are looking and let Pricema AI do the
@@ -28,9 +37,9 @@ const Hero = () => {
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 100]} scale={2.2}>
+            <Sphere args={[1, 100, 100]} scale={2.1}>
               <MeshDistortMaterial
-                color="#0524ff"
+                color="#4d3ff5"
                 attach="material"
                 distort={0.5}
                 speed={1}
