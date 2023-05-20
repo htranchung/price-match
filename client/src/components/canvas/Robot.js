@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Robot = ({ isMobile }) => {
   const robot = useGLTF("./robot-model/scene.gltf");
@@ -10,17 +10,17 @@ const Robot = ({ isMobile }) => {
       <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[10, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
+        angle={0.5}
+        penumbra={2}
+        intensity={.7}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={.5} />
       <primitive
         object={robot.scene}
         scale={isMobile ? 1.5 : 4.2}
-        position={isMobile ? [0, -3, -2.2] : [1,-1.5, 1]}
+        position={isMobile ? [0, -3, 1.5] : [.5,-1.5, .5]}
         rotation={[0, -5, 0]}
       />
     </mesh>

@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "ai";
+  src: url(assets/fonts/ai.ttf);
+}
+
+/********************************************* 
+Global Styles
+********************************************/
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
 
 /********************************************* 
 Hero Section 
@@ -55,6 +68,14 @@ Hero Section
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
+}
+
+.title span {
+  font-family: ai;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.889);
+  text-shadow: #cdccdc 0px 0px 10px;
+  text-decoration-color: #4d3ff5;
 }
 
 .subtitle {
