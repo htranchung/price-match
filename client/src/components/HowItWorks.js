@@ -67,16 +67,3 @@ const HowItWorks = () => {
 }
 
 export default HowItWorks
-
-
-{/* <section className='how-it-works'>
-<div className='centered-container'>
-  <div className='heading'>
-    <div className='text11'>How it works</div>
-    <div className={` $'text12' ${project['title' `}>
-      A Shopping Toolkit for all Your Needs!
-    </div>
-  </div>
-
-</div>
-</section> */}
