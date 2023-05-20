@@ -7,11 +7,13 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Profile from './pages/Profile';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import Aisearch from "./components/Aisearch";
 import Aichat from "./components/Aichat";
+import SearchPage from "./pages/Search";
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -41,8 +43,17 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Aisearch" element={<Aisearch />} />
+            {/* <Route 
+                path="/me"
+                element={<Profile />}
+              /> */}
+              {/* <Route 
+                path="/profiles/:username"
+                element={<Profile />}
+              /> */}
             <Route path="/Aichat" element={<Aichat />} />
             <Route path="/Signup" element={<Signup />} />
+            <Route path="/SearchPage" element={<SearchPage />} />
           </Routes>
         </Router>
       </div>

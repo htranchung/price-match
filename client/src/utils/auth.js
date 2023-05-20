@@ -1,5 +1,5 @@
-import decode from 'jwt-decode';
-import bcrypt from 'bcryptjs';
+const decode = require('jwt-decode');
+const bcrypt = require('bcryptjs');
 
 class AuthService {
   getProfile() {
