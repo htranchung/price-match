@@ -1,5 +1,6 @@
 import React from "react";
 import LogoOnly from "../assets/LogoOnly.svg";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
