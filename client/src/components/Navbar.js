@@ -1,6 +1,5 @@
-import React from 'react'
-import LogoOnly from '../assets/LogoOnly.png';
-import { Link } from 'react-router-dom';
+import React from "react";
+import LogoOnly from "../assets/LogoOnly.svg";
 
 const Navbar = () => {
     return (
@@ -32,7 +31,7 @@ const Navbar = () => {
                 </div>
             </nav>
         </div>
-    )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

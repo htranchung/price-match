@@ -68,3 +68,19 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
+
+
+export const animateArrow = () => {
+  const arrowPath = document.getElementById('arrowPath');
+
+  if (arrowPath) {
+    // Animate the arrow by changing its y-coordinate using CSS transform
+    arrowPath.style.transition = 'transform 0.3s ease-in-out';
+    arrowPath.style.transform = 'translateY(-10px)';
+
+    // Reset the arrow position after the animation completes
+    setTimeout(() => {
+      arrowPath.style.transform = 'translateY(0)';
+    }, 300);
+  }
+};
