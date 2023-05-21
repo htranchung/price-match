@@ -1,10 +1,6 @@
 import React from "react";
 import RobotCanvas from "./canvas/Robot";
-import {
-  MeshDistortMaterial,
-  Sphere,
-  OrbitControls,
-} from "@react-three/drei";
+import { MeshDistortMaterial, Sphere, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 const Hero = () => {
@@ -14,8 +10,7 @@ const Hero = () => {
         <div className="left-hero-container">
           <h1 className="title">
             PRICEMA <span>AI.</span>
-            <br />
-            A TOOLKIT FOR ALL YOUR SHOPPING NEEDS
+            <br />A TOOLKIT FOR ALL YOUR SHOPPING NEEDS
           </h1>
           <p className="subtitle">
             Finally a tool to find the best price for all your shopping needs.
@@ -24,6 +19,7 @@ const Hero = () => {
           </p>
           <button
             type="button"
+            onClick={() => window.open("http://localhost:3000/aichat")}
             className="try-btn focus:outline-none font-medium rounded-3xl mr-3 md:mr-0">
             Try Pricema AI
           </button>
