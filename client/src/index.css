@@ -135,67 +135,63 @@ Hero Section
 }
 
 /********************************************* 
-About Us Section 
+Team Section
 ********************************************/
 
-.outterContainer {
-  background-color: #232323;
-  display: grid;
-  place-items: center;
+.team-card {
+  background-color: #eae2e2;
+  padding: 20px;
+  border: #4d3ff5 10px inset;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 1.5s ease-in-out; /* Animation */
 }
 
-.ourTeamContainer {
-  max-width: 75%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: #4d3ff5;
-  color: white;
-  height: 625px;
+.team-card:hover {
+  transform: scale(1.2);
 }
 
-.ourTeamContainer h1 {
+.team-card h2 {
   margin-top: 20px;
   font-size: 30px;
   font-weight: 600;
 }
 
-.ourTeamContainer h2 {
+.team-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.team-card p {
   font-size: 15px;
-  text-align: center;
-  max-width: 60%;
+  font-weight: 500;
   margin: 0 auto;
   line-height: 1;
   margin-bottom: 30px;
 }
 
-.ourTeam {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.team-card .profile-img {
+  border-radius: 50%;
+  border: #211062 6px double;
 }
 
-.card {
-  flex: 1;
-  margin-right: 25px;
-  margin-left: 25px;
-  margin-top: 25px;
-  max-width: 280px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.team-card img:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.card svg {
-  width: 125px;
-  height: 125px;
-  margin-bottom: 2px;
-  fill: #4d3ff5;
-  flex: 1;
-  margin-right: 25px;
-  margin-left: 25px;
+.links img {
+  width: 40px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: transform 1.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.github-link img {
+  border-radius: 50%;
+  background-color: #4e3ff5ee;
 }
 
 /********************************************* 
