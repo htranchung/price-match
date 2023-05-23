@@ -45,6 +45,7 @@ Heading Styles
 
 .hoverButtons:hover {
   background-color: #5228f5;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 /********************************************* 
