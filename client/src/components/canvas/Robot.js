@@ -19,7 +19,7 @@ const Robot = ({ isMobile }) => {
       <pointLight intensity={.5} />
       <primitive
         object={robot.scene}
-        scale={isMobile ? 1.5 : 4.2}
+        scale={isMobile ? 2.5 : 4.5}
         position={isMobile ? [0, -3, 1.5] : [.5,-1.5, .5]}
         rotation={[0, -5, 0]}
       />
