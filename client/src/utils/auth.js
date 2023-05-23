@@ -1,5 +1,5 @@
-const decode = require('jwt-decode');
-const bcrypt = require('bcryptjs');
+import decode from 'jwt-decode';
+import bcrypt from 'bcryptjs';
 
 class AuthService {
   getProfile() {
@@ -48,4 +48,5 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+const authService = new AuthService();
+export default authService;

@@ -9,7 +9,7 @@ import Linkedin from "../assets/LinkedIn.png";
 
 const OurTeam = () => {
   return (
-    <div className="bg-[#211062]">
+    <div id="ourTeamSection" className="bg-[#4d3ff5]">
       <section>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
@@ -40,19 +40,18 @@ const OurTeam = () => {
                   </h2>
                   <h3 className="mb-3">UX Designer/Developer</h3>
                   <p className="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                  Harrison is a proud graduate of the University of Minnesota's Full-Stack Web Development Program. Equipped with a strong foundation in Front-End and Back-End development, Harrison is skilled in HTML, CSS, JavaScript, and frameworks such as React and Node.js. With a passion for creating seamless online experiences, Harrison brings expertise in API integration, and responsive design principles to contribute to innovative web development projects.
                   </p>
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
-                      href="https://github.com/Harrison-K">
+                      href="https://github.com/htranchung">
                       <img src={Github} />
                     </a>
-                    <a className="links flex" href="#">
+                    <a className="links flex" href="https://react-homework.herokuapp.com/">
                       <img src={Website} />
                     </a>
-                    <a className="links flex" href="#">
+                    <a className="links flex" href="https://www.linkedin.com/in/harrison-tran-chung-1910b01b5/">
                       <img src={Linkedin} />
                     </a>
                   </span>
@@ -80,13 +79,13 @@ const OurTeam = () => {
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
-                      href="https://github.com/Harrison-K">
+                      href="https://github.com/tanvirkhon">
                       <img src={Github} />
                     </a>
-                    <a className="links flex" href="#">
+                    <a className="links flex" href="https://tanvir.digital/">
                       <img src={Website} />
                     </a>
-                    <a className="links flex" href="#">
+                    <a className="links flex" href="https://www.linkedin.com/in/tanvirkhondakar/">
                       <img src={Linkedin} />
                     </a>
                   </span>
@@ -113,13 +112,13 @@ const OurTeam = () => {
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
-                      href="https://github.com/Harrison-K">
+                      href="https://github.com/ricardoci">
                       <img src={Github} />
                     </a>
-                    <a className="links flex" href="#">
+                    <a className="links flex" href="https://reactportfolio22.herokuapp.com/">
                       <img src={Website} />
                     </a>
-                    <a className="links flex" href="#">
+                    <a className="links flex" href="https://www.linkedin.com/in/ricardo-cisneros-5b8b3024b">
                       <img src={Linkedin} />
                     </a>
                   </span>
@@ -145,13 +144,10 @@ const OurTeam = () => {
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
-                      href="https://github.com/Harrison-K">
+                      href="https://github.com/Bright-Verdant">
                       <img src={Github} />
                     </a>
-                    <a className="links flex" href="#">
-                      <img src={Website} />
-                    </a>
-                    <a className="links flex" href="#">
+                    <a className="links flex" href="https://www.linkedin.com/in/raymond-stack-vanasse-870164128/">
                       <img src={Linkedin} />
                     </a>
                   </span>
