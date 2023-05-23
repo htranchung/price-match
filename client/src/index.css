@@ -23,6 +23,14 @@ Heading Styles
   margin-left: 110px;
 }
 
+.navbarPricemaAI {
+  margin-right: 230px;
+}
+
+.navbarOurTeam {
+  margin-left: 110px;
+}
+
 .navbar button {
   transition: background-color 0.4s, color 0.4s;
 }
@@ -33,6 +41,10 @@ Heading Styles
   width: 100%;
   margin: auto;
   overflow: hidden;
+}
+
+.hoverButtons:hover {
+  background-color: #5228f5;
 }
 
 /********************************************* 
