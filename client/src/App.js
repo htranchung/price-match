@@ -14,6 +14,15 @@ import Home from "./pages/Home";
 import Aisearch from "./components/Aisearch";
 import Aichat from "./components/Aichat";
 import SearchPage from "./pages/Search";
+import Checkout from "./pages/Checkout";
+import CheckoutForm from "./components/CheckoutForm";
+
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe('pk_test_51NAj8fB9d7BNivffVL6Z6HlcA5jNT2lNmv8OMtKbogyx6ePOfewPlCtfcsgioeXZgq1AHOhgEC9qhFRiUxhu9wzw00z3Krv8Hm');
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -35,7 +44,16 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 const App = () => {
+
+  const options = {
+    // passing the client secret obtained from the server
+    clientSecret: '{{CLIENT_SECRET}}',
+  };
+
   return (
+<Elements stripe={stripePromise} options={options}>
+      <CheckoutForm />
+
     <ApolloProvider client={client}>
       <div className="app">
         <Router>
@@ -58,6 +76,7 @@ const App = () => {
         </Router>
       </div>
     </ApolloProvider>
+    </Elements>
   );
 };
 
