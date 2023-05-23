@@ -75,7 +75,7 @@ const Signup = () => {
                   <input
                   
                     type="text"
-                    placeholder="Your username"
+                    placeholder="Your Username"
                     className="form-input peer block min-h-[auto] w-full rounded-lg border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none"
                     id="username-login"
                     name="username"
@@ -107,7 +107,7 @@ const Signup = () => {
                 <div className="form-group relative mb-4" data-te-input-wrapper-init>
                   <input
                     type="password"
-                    placeholder="password"
+                    placeholder="Password"
                     className="form-input peer block min-h-[auto] w-full rounded-lg border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none"
                     id="password-login"
                     name="password"
