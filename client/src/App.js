@@ -14,6 +14,8 @@ import Home from "./pages/Home";
 import Aisearch from "./components/Aisearch";
 import Aichat from "./components/Aichat";
 import SearchPage from "./pages/Search";
+import Profile from './pages/Profile';
+import SingleThought from './pages/SingleThought';
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -43,14 +45,18 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Aisearch" element={<Aisearch />} />
-            {/* <Route 
+            <Route 
                 path="/me"
                 element={<Profile />}
-              /> */}
-              {/* <Route 
+              />
+               <Route 
                 path="/profiles/:username"
                 element={<Profile />}
-              /> */}
+              />
+              <Route 
+                path="/thoughts/:thoughtId"
+                element={<SingleThought />}
+              />
             <Route path="/Aichat" element={<Aichat />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/SearchPage" element={<SearchPage />} />
