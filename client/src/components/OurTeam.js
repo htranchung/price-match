@@ -9,7 +9,7 @@ import Linkedin from "../assets/LinkedIn.png";
 
 const OurTeam = () => {
   return (
-    <div className="bg-[#211062]">
+    <div className="bg-[#4d3ff5]">
       <section>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">

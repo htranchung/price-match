@@ -16,6 +16,26 @@ Global Styles
 }
 
 /********************************************* 
+Heading Styles
+********************************************/
+
+.spacingButton {
+  margin-left: 110px;
+}
+
+.navbar button {
+  transition: background-color 0.4s, color 0.4s;
+}
+
+#loginSignup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/********************************************* 
 Hero Section 
 ********************************************/
 
@@ -28,7 +48,7 @@ Hero Section
   align-items: center;
   justify-content: space-between;
   @media only screen and (max-width: 768px) {
-    height: 200vh;
+    height: 100vh;
   }
 }
 
@@ -53,9 +73,9 @@ Hero Section
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   @media only screen and (max-width: 768px) {
-    padding-top: 200px;
+    padding-top: 100px;
     flex: 1;
     align-items: center;
   }
@@ -105,14 +125,6 @@ Hero Section
   transition: background-color 0.4s, color 0.4s;
 }
 
-.spacingButton {
-  margin-left: 110px;
-}
-
-.navbar button {
-  transition: background-color 0.4s, color 0.4s;
-}
-
 /* Right Hero Container */
 
 .right-hero-container {
@@ -141,14 +153,14 @@ Team Section
 .team-card {
   background-color: #eae2e2;
   padding: 20px;
-  border: #4d3ff5 10px inset;
+  border: #201062e2 10px inset;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: transform 1.5s ease-in-out; /* Animation */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
+  transition: transform 2s ease-in-out; /* Animation */
 }
 
 .team-card:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .team-card h2 {
@@ -235,56 +247,42 @@ How It Works Section
 ********************************************/
 
 .howItWorksSection {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   background-color: #211062;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-#loginSignup {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.spacingForText {
-  margin-bottom: 80px;
-}
-
-.category {
+/* Card One - Simple Search */
+.simple-search-card {
   color: white;
-  width: 65%;
-  height: 325px;
   display: flex;
-  overflow: hidden;
   border-radius: 50px;
   flex-direction: row;
   background-color: #5228f5;
   margin-bottom: 50px;
+  box-shadow: #000000 5px 15px 30px;
+  border: #fff 15px double;
 }
 
-.heading {
-  flex: 1;
+.card-info-section {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
   margin-left: 50px;
-  padding-left: 10px;
 }
 
-.text13 {
+.card-heading {
+  padding-top: 20px;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   margin-bottom: 40px;
 }
 
-.text14 {
-  color: #eee9fe;
+.card-text {
+  font-size: 18px;
+  color: #eeecf4;
   line-height: 24px;
   margin-bottom: 40px;
 }
@@ -305,121 +303,99 @@ How It Works Section
   color: black;
 }
 
+.card-img-container {
+  height: auto;
+  width: auto;
+}
+
+/* Buttons for Cards */
+.ai-search-img {
+  max-width: 500px;
+  max-height: 500px;
+  padding-right: 20px;
+  transition: transform 2.5s ease-in-out; /* Animation */
+}
+
+.ai-search-img:hover {
+  transform: scale(1.07);
+}
+
+.ai-chat-img {
+  max-width: 500px;
+  max-height: 500px;
+  padding-left: 20px;
+  transition: transform 2.5s ease-in-out; /* Animation */
+}
+
+.ai-chat-img:hover {
+  transform: scale(1.07);
+}
+
+.ai-analysis-img {
+  transition: transform 2.5s ease-in-out; /* Animation */
+}
+
+.ai-analysis-img:hover {
+  transform: scale(1.07);
+}
+
+/* Card Two - AI Chat  */
+
 .chatSearchButton {
   display: inline-block;
   padding: 12px 30px;
   border-radius: 20px;
-  background-color: black;
+  background-color: #5228f5;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.2s, color 0.2s;
   margin: 0 auto;
   margin-top: 25px;
 }
 
 .chatSearchButton:hover {
-  background-color: white;
-  color: black;
-}
-
-.container1 {
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-self: flex-end;
-  flex-direction: row;
-}
-
-.pasted-image {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 100%;
-}
-
-.how-it-works {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #211062;
-}
-
-.textSection {
-  color: rgb(255, 255, 255);
-  font-size: 72px;
-  font-style: normal;
-  text-align: center;
-  font-weight: 700;
-  line-height: 80px;
-  margin-top: 50px;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 65%;
-  margin-bottom: 80px;
-}
-
-.gap {
-  width: 40px;
-}
-
-.category1 {
-  flex: 1;
+  background-color: black;
   color: white;
-  height: 555px;
+}
+
+.ai-chat-card {
+  color: white;
   display: flex;
-  overflow: hidden;
-  align-items: flex-end;
   border-radius: 50px;
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffffff;
   margin: 0 10px;
   text-align: center;
+  box-shadow: #000000 5px 15px 30px;
+  border: #000 15px double;
 }
 
-.heading1 {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding-bottom: 0px;
-}
-
-.text16 {
-  color: black;
+.ai-chat-heading {
+  color: rgb(12, 12, 12);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 16px;
   margin: 0 50px;
   margin-left: 72px;
   margin-top: 35px;
 }
 
-.text17 {
-  color: #1e1e1e;
+.ai-chat-text {
+  font-size: 18px;
+  color: rgb(12, 12, 12);
   line-height: 24px;
   margin: 0 50px;
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
-.pasted-image1 {
-  width: 364px;
-  height: 328px;
-  align-self: center;
-}
+/* Card Three - AI Analysis  */
 
-.category2 {
+.ai-analysis-card {
   flex: 1;
   color: white;
-  height: 555px;
   display: flex;
-  overflow: hidden;
   align-items: flex-end;
   border-radius: 50px;
   flex-direction: column;
@@ -427,78 +403,45 @@ How It Works Section
   background-color: #000000;
   margin: 5 10px;
   text-align: center;
+  box-shadow: #000000 5px 15px 30px;
+  border: #4d3ff5 15px double;
 }
 
-.heading2 {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  padding-top: var(--dl-space-space-fourunits);
-  padding-left: var(--dl-space-space-fourunits);
-  padding-right: var(--dl-space-space-fourunits);
-  flex-direction: column;
-  padding-bottom: 0px;
-}
-
-.text19 {
+.analysis-heading {
   color: rgb(255, 255, 255);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 16px;
   margin: 0 50px;
   margin-left: 72px;
   margin-top: 35px;
 }
 
-.text20 {
-  color: rgb(238, 233, 254);
+.analysis-text {
+  font-size: 18px;
+  color: rgb(255, 254, 255);
   line-height: 24px;
   margin: 0 50px;
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
-.pasted-image2 {
-  width: 100%;
-  object-fit: contain;
+.ai-analysis-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
+  margin: 0 auto;
+  margin-top: 25px;
 }
 
-.p1 {
-  color: rgb(255, 255, 255);
-  font-size: 72px;
-  font-style: normal;
-  text-align: center;
-  font-weight: 700;
-  line-height: 80px;
-  margin-top: 100px;
+.ai-analysis-btn:hover {
+  background-color: #5228f5;
+  color: black;
 }
-
-.p2 {
-  color: rgb(238, 233, 254);
-  font-size: 20px;
-  max-width: 600px;
-  margin-top: 16px;
-  text-align: center;
-  line-height: 30px;
-}
-
-/* @media (max-width: 1114px) {
-  .card img {
-    display: none;
-  }
-}
-
-@media (max-width: 1280px) {
-  .card svg {
-    display: none;
-  }
-}
-
-@media (max-width: 880px) {
-  .howItWorksSection img {
-    display: none;
-  }
-} */
 
 /*************************************** 
 Side Menu
