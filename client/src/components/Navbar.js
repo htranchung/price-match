@@ -27,6 +27,8 @@ const Navbar = () => {
               </Link>
               <button type="button" onClick={handleLogout} className="text-black bg-white hoverButtons focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Logout</button>
               </>
+
+
             ) : (
               // Render Sign In and Signup buttons if the user is not logged in
               <>
