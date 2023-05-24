@@ -16,6 +16,10 @@ import Aichat from "./components/Aichat";
 import SearchPage from "./pages/Search";
 import Profile from './pages/Profile';
 import SingleThought from './pages/SingleThought';
+// new
+import Payment from "./components/StripePayment/Payment";
+import Completion from "./components/StripePayment/Completion";
+// 
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -59,7 +63,12 @@ const App = () => {
               />
             <Route path="/Aichat" element={<Aichat />} />
             <Route path="/Signup" element={<Signup />} />
+
             <Route path="/SearchPage" element={<SearchPage />} />
+            {/* new */}
+            <Route path="/Payment" element={<Payment />} />
+            <Route path="/api/Completion" element={<Completion />} />
+            {/*  */}
           </Routes>
         </Router>
       </div>

@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node seeders/seed.js"
+    "seed": "node seeders/seed.js",
+    "format": "prettier --write \"**/*.{js,jsx}\""
   },
   "keywords": [],
   "author": "",
@@ -24,9 +25,14 @@
     "express": "^4.17.2",
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^7.0.2"
+    "mongoose": "^7.0.2",
+
+    "body-parser": "^1.19.0",
+    "stripe": "^8.191.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+
+    "prettier": "^2.7.1"
   }
 }
