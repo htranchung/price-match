@@ -1,7 +1,7 @@
 # Price Match 
 
 ## Where You Can Find Us
-![Pricema-AI](https://github.com/htranchung/price-match/assets/60548511/3f41fced-ccb3-4458-b3ec-af028225023b)
+![Pricema-AI](https://github.com/htranchung/price-match/assets/60548511/036e47cf-4507-4644-8982-a1d4c13b8b69)
 
 -https://github.com/htranchung/price-match
 
