@@ -106,8 +106,7 @@ const OurTeam = () => {
                   </h2>
                   <h3 className="mb-3">UX Designer/Developer</h3>
                   <p className="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                  Full Stack Developer who is passionate about continuously expanding my skill set and keeping up-to-date with the latest technologies. Knowledgeable of backend and frontend development requirements. Handles any part of process with ease. Collaborative team player with excellent technical abilities with lots of on hand experience.
                   </p>
                   <span className="inline-flex items-center">
                     <a

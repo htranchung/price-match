@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 
-import { ADD_THOUGHT } from '../../utils/mutations';
+import { ADD_THOUGHT, UPDATE_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
 const ThoughtForm = () => {
   const [thoughtText, setThoughtText] = useState('');
-
   const [characterCount, setCharacterCount] = useState(0);
+  const [isUpdatingThought, setIsUpdatingThought] = useState(false);
+  const { loading, data } = useQuery(QUERY_ME);
+  const userData = data?.me;
+
+  useEffect(() => {
+    if (userData) {
+      setIsUpdatingThought(userData.thoughts.length > 0);
+    }
+  }, [userData]);
 
   const [addThought, { error }] = useMutation(ADD_THOUGHT, {
     update(cache, { data: { addThought } }) {
@@ -25,7 +33,6 @@ const ThoughtForm = () => {
         console.error(e);
       }
 
-      // update me object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
@@ -34,18 +41,32 @@ const ThoughtForm = () => {
     },
   });
 
-  const handleFormSubmit = async (event) => {
+  const [updateThought] = useMutation(UPDATE_THOUGHT);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const { data } = await addThought({
-        variables: {
-          thoughtText,
-          thoughtAuthor: Auth.getProfile().data.username,
-        },
-      });
+      if (thoughtText) {
+        if (isUpdatingThought) {
+          const thoughtId = userData.thoughts[0]._id; // Use the ID of the first thought
+          await updateThought({
+            variables: {
+              thoughtId,
+              thoughtText,
+            },
+          });
+        } else {
+          await addThought({
+            variables: {
+              thoughtText,
+              thoughtAuthor: Auth.getProfile().data.username,
+            },
+          });
+        }
 
-      setThoughtText('');
+        setThoughtText('');
+      }
     } catch (err) {
       console.error(err);
     }
@@ -62,20 +83,17 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>Updat Bio</h3>
+      <h3>{isUpdatingThought ? 'Update Bio' : 'Add Bio'}</h3>
 
       {Auth.loggedIn() ? (
         <>
-          <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
-          >
+          <p className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''}`}>
             Character Count: {characterCount}/280
           </p>
+
           <form
             className="flex-row justify-center justify-space-between-md align-center"
-            onSubmit={handleFormSubmit}
+            onSubmit={handleSubmit}
           >
             <div className="col-12 col-lg-9">
               <textarea
@@ -89,21 +107,19 @@ const ThoughtForm = () => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                Add BIO
+              <button className="btn bg-white btn-primary btn-block py-3" type="submit">
+                {isUpdatingThought ? 'Update BIO' : 'Add BIO'}
               </button>
             </div>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
-              </div>
+              <div className="col-12 my-3 bg-danger text-white p-3">{error.message}</div>
             )}
           </form>
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          You need to be logged in to share your thoughts. Please <Link to="/login">login</Link> or{' '}
+          <Link to="/signup">signup.</Link>
         </p>
       )}
     </div>
