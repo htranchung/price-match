@@ -1,12 +1,7 @@
 import "../normalize.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Aichat() {
-  // Use Effect to get models
-  // useEffect(() => {
-  //   getEngines();
-  // }, []);
-
   // Add State for input and Chat Log
   const [input, setInput] = useState("");
   const [models, setModels] = useState([]);
@@ -27,13 +22,6 @@ function Aichat() {
     setChatLog([]);
   }
 
-  // Get models from OpenAI API
-  function getEngines() {
-    fetch("http://localhost:3080/models")
-      .then((res) => res.json())
-      .then((data) => setModels(data.models));
-  }
-
   async function handleSubmit(e) {
     e.preventDefault();
     let chatLogNew = [...chatLog, { user: "me", message: `${input}` }];
@@ -42,7 +30,7 @@ function Aichat() {
 
     // Fetch response to the api combining the chat log array of messages and sending it as a message to localhost:3000 as a POST request
     const messages = chatLogNew.map((message) => message.message).join("\n");
-    const response = await fetch("http://localhost:3080/", {
+    const response = await fetch("http://localhost:3001/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,15 +50,6 @@ function Aichat() {
       <aside className="side-menu">
         <div className="side-menu-button" onClick={clearChatLog}>
           <span>+</span>New Chat
-        </div>
-        <div className="models">
-          {/* <select onChange={(e) => setCurrentModel(e.target.value)}>
-            {models.map((model, index) => (
-              <option key={model.id} value={model.id}>
-                {model.id}
-              </option>
-            ))}
-          </select> */}
         </div>
       </aside>
 
