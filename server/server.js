@@ -5,6 +5,17 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers} = require('./schemas/index.js');
 const {connection} = require( './config/connection');
 
+// Set your secret key. Remember to switch to your live secret key in production.
+// See your keys here: https://dashboard.stripe.com/apikeys
+const stripe = require('stripe')('pk_test_51NAj8fB9d7BNivffVL6Z6HlcA5jNT2lNmv8OMtKbogyx6ePOfewPlCtfcsgioeXZgq1AHOhgEC9qhFRiUxhu9wzw00z3Krv8Hm');
+
+const paymentIntent = await stripe.paymentIntents.create({
+  amount: .01,
+  currency: 'usd',
+  automatic_payment_methods: {
+    enabled: true,
+  },
+});
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -23,6 +34,11 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+app.get('/secret', async (req, res) => {
+  const intent = // ... Fetch or create the PaymentIntent
+  res.json({client_secret: intent.client_secret});
 });
 
 // Create a new instance of an Apollo server with the GraphQL schema

@@ -23,6 +23,12 @@ import {loadStripe} from '@stripe/stripe-js';
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe('pk_test_51NAj8fB9d7BNivffVL6Z6HlcA5jNT2lNmv8OMtKbogyx6ePOfewPlCtfcsgioeXZgq1AHOhgEC9qhFRiUxhu9wzw00z3Krv8Hm');
 
+(async () => {
+  const response = await fetch('/secret');
+  const {client_secret: clientSecret} = await response.json();
+  // Render the form using the clientSecret
+})();
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -43,11 +49,14 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-const App = () => {
 
+
+function App() {
   const options = {
-    // passing the client secret obtained from the server
+    // passing the client secret obtained in step 3
     clientSecret: '{{CLIENT_SECRET}}',
+    // Fully customizable with appearance API.
+    appearance: {/*...*/},
   };
 
   return (
@@ -72,6 +81,7 @@ const App = () => {
             <Route path="/Aichat" element={<Aichat />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/SearchPage" element={<SearchPage />} />
+            <Route path="/Paywall" element={<Checkout />} />
           </Routes>
         </Router>
       </div>

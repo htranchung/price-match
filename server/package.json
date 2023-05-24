@@ -15,16 +15,19 @@
   "license": "ISC",
   "dependencies": {
     "@pinecone-database/pinecone": "^0.1.5",
-    "d3-dsv": "^2.0.0",
-    "dotenv": "^16.0.3",
-    "langchain": "^0.0.75",
-    "pdf-parse": "^1.1.1",
+    "@stripe/react-stripe-js": "^2.1.0",
+    "@stripe/stripe-js": "^1.53.0",
     "apollo-server-express": "^3.6.2",
     "bcrypt": "^5.0.0",
+    "d3-dsv": "^2.0.0",
+    "dotenv": "^16.0.3",
     "express": "^4.17.2",
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^7.0.2"
+    "langchain": "^0.0.75",
+    "mongoose": "^7.0.2",
+    "pdf-parse": "^1.1.1",
+    "stripe": "^12.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
