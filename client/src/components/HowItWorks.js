@@ -28,7 +28,7 @@ const HowItWorks = () => {
             <div className="card-info-section p-4 lg:w-1/2">
               <h2 className="card-heading">Simple AI Search</h2>
               <p className="card-text">
-              The Simple AI search feature utilizes advanced algorithms to quickly and accurately retrieve relevant information from vast data sources, providing users with efficient and comprehensive search results. Its intuitive interface and powerful indexing system make it effortless to find the desired information with just a few keystrokes.
+                The Simple AI search feature utilizes advanced algorithms to quickly and accurately retrieve relevant information from vast data sources, providing users with efficient and comprehensive search results. Its intuitive interface and powerful indexing system make it effortless to find the desired information with just a few keystrokes.
               </p>
               <button type="button" className="tryNowButton">
                 Try Now
@@ -44,9 +44,13 @@ const HowItWorks = () => {
               <div>
                 <h2 className="ai-chat-heading">AI Chat</h2>
                 <p className="ai-chat-text">
-                Engage in natural and engaging conversations with our AI Chat feature, designed to understand and respond to your queries instantly, providing personalized assistance that makes it feel like you're chatting with a human.
+                  Engage in natural and engaging conversations with our AI Chat feature, designed to understand and respond to your queries instantly, providing personalized assistance that makes it feel like you're chatting with a human.
                 </p>
-                <button className="chatSearchButton">AI Chat Search</button>
+                <button
+                  type="button"
+                  onClick={() => window.open("http://localhost:3000/aichat")}
+                  className="chatSearchButton">AI Chat Search
+                </button>
               </div>
               <Lottie className="ai-chat-img" animationData={animationData3} />
             </div>
@@ -55,7 +59,7 @@ const HowItWorks = () => {
               <div>
                 <h2 className="analysis-heading">AI Analysis</h2>
                 <p className="analysis-text">
-                Our advanced AI analysis technology leverages cutting-edge algorithms to process and extract valuable insights from complex data sets, empowering businesses to make data-driven decisions with speed and accuracy.
+                  Our advanced AI analysis technology leverages cutting-edge algorithms to process and extract valuable insights from complex data sets, empowering businesses to make data-driven decisions with speed and accuracy.
                 </p>
                 <button className="ai-analysis-btn">AI Analysis</button>
               </div>
