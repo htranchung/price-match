@@ -46,13 +46,10 @@ const OurTeam = () => {
                     <a
                       className="links github-link flex"
                       href="https://github.com/htranchung">
-                      <img src={Github} />
-                    </a>
-                    <a className="links flex" href="https://react-homework.herokuapp.com/">
-                      <img src={Website} />
+                      <img src={Github} alt="Github"/>
                     </a>
                     <a className="links flex" href="https://www.linkedin.com/in/harrison-tran-chung-1910b01b5/">
-                      <img src={Linkedin} />
+                      <img src={Linkedin} alt="LinkedIn"/>
                     </a>
                   </span>
                 </div>
@@ -80,13 +77,13 @@ const OurTeam = () => {
                     <a
                       className="links github-link flex"
                       href="https://github.com/tanvirkhon">
-                      <img src={Github} />
+                      <img src={Github} alt="Github"/>
                     </a>
                     <a className="links flex" href="https://tanvir.digital/">
-                      <img src={Website} />
+                      <img src={Website} alt="Website"/>
                     </a>
                     <a className="links flex" href="https://www.linkedin.com/in/tanvirkhondakar/">
-                      <img src={Linkedin} />
+                      <img src={Linkedin} alt="LinkedIn"/>
                     </a>
                   </span>
                 </div>
@@ -113,13 +110,13 @@ const OurTeam = () => {
                     <a
                       className="links github-link flex"
                       href="https://github.com/ricardoci">
-                      <img src={Github} />
+                      <img src={Github} alt="Github"/>
                     </a>
                     <a className="links flex" href="https://reactportfolio22.herokuapp.com/">
-                      <img src={Website} />
+                      <img src={Website} alt="Website"/>
                     </a>
                     <a className="links flex" href="https://www.linkedin.com/in/ricardo-cisneros-5b8b3024b">
-                      <img src={Linkedin} />
+                      <img src={Linkedin} alt="LinkedIn"/>
                     </a>
                   </span>
                 </div>
@@ -145,10 +142,10 @@ const OurTeam = () => {
                     <a
                       className="links github-link flex"
                       href="https://github.com/Bright-Verdant">
-                      <img src={Github} />
+                      <img src={Github} alt="Github"/>
                     </a>
                     <a className="links flex" href="https://www.linkedin.com/in/raymond-stack-vanasse-870164128/">
-                      <img src={Linkedin} />
+                      <img src={Linkedin} alt="LinkedIn" />
                     </a>
                   </span>
                 </div>
