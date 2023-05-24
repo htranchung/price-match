@@ -51,20 +51,29 @@ const resolvers = {
     },
     addThought: async (parent, { thoughtText }, context) => {
       if (context.user) {
+        const user = await User.findOne({ _id: context.user._id }).populate('thoughts');
+    
+        if (user.thoughts.length > 0) {
+          throw new AuthenticationError('Only one thought per user is allowed.');
+        }
+    
         const thought = await Thought.create({
           thoughtText,
           thoughtAuthor: context.user.username,
         });
-
+    
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { thoughts: thought._id } }
         );
-
+    
         return thought;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    
+    
+    
     removeThought: async (parent, { thoughtId }, context) => {
       if (context.user) {
         const thought = await Thought.findOneAndDelete({
@@ -81,9 +90,35 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    
-  },
+    updateThought: async (_, { thoughtId, thoughtText }, context) => {
+      if (context.user) {
+        try {
+          // Find the thought by its ID
+          const thought = await Thought.findOneAndUpdate(
+            { _id: thoughtId, thoughtAuthor: context.user.username },
+            { thoughtText },
+            { new: true }
+          );
+
+          if (!thought) {
+            throw new Error('Thought not found or user is not the author');
+          }
+
+          return thought;
+        } catch (err) {
+          throw new Error(err);
+        }
+      }
+      throw new AuthenticationError('You need to be logged in to perform this action.');
+    },
   
+   
+  
+    
+  }
 };
+    
+    
+  
 
 module.exports = resolvers;

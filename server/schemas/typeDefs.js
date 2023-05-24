@@ -7,6 +7,7 @@ const typeDefs = gql`
     email: String
     password: String
     thoughts: [Thought]!
+    bio: String
   }
   type Thought {
     _id: ID
@@ -35,7 +36,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     addThought(thoughtText: String!): Thought
     removeThought(thoughtId: ID!): Thought
-    
+    updateThought(thoughtId: ID!, thoughtText: String!): Thought
   }
 `;
 

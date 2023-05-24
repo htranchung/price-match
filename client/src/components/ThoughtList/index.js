@@ -31,7 +31,7 @@ const ThoughtList = ({
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    Bio Last Updated {thought.createdAt}
+                    Bio 
                   </span>
                 </>
               )}
@@ -39,12 +39,7 @@ const ThoughtList = ({
             <div className="card-body bg-light p-2">
               <p>{thought.thoughtText}</p>
             </div>
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/thoughts/${thought._id}`}
-            >
-              Update Bio
-            </Link>
+           
           </div>
         ))}
     </div>
