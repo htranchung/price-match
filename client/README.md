@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Price Match 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Where You Can Find Us
 
-## Available Scripts
+-https://github.com/htranchung/price-match
 
-In the project directory, you can run:
+## User Story
 
-### `npm start`
+AS A webpage user 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I WANT to be able to search for a products and find the prices between 2 stores.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+SO THAT I can compare each products between stores and find the lowest price. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Acceptance Criteria
 
-### `npm run build`
+GIVEN the user is on the homepage of the Price Match Application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+WHEN the user clicks on Pricema AI they open a chat box.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+THEN the user searches for a products carried by Target and Best Buy, and then is given 2 prices from each store. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Description
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Our project introduces an AI-powered chatbot that searches for the lowest prices on products from Target and Best Buy. The chatbot utilizes AI analysis to compare prices, provide recommendations, and offer valuable insights, enabling users to make informed purchasing decisions. With its conversational interface and advanced features, our chatbot simplifies the process of finding the best deals, saving users time and money.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This guide is intended for the person who will be setting up the Price Match application on a hosting platform or locally. Please follow the instructions below to set up the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Prerequisites
+Before setting up the application, you need to have the following software and accounts:
 
-## Learn More
+-Node.js version 12 or later installed on your computer.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-A OpenAI API key. You can obtain a key by following the instructions in the OpenAI API documentation. (https://platform.openai.com/docs/api-reference/introduction)  (note OpenAI API is completely free of charge)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-An account with a hosting platform to run the React application live or run locally you want to "npm install" and then "npm run develop"
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Installation
+To install the Price Match application, follow the steps below:
 
-### Analyzing the Bundle Size
+-Clone the application repository from GitHub: https://github.com/htranchung/price-match
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-Navigate to the project directory
 
-### Making a Progressive Web App
+-Install the application dependencies: "npm install"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-Start the application: "npm run develop"
 
-### Advanced Configuration
+-The application should now be running locally at http://localhost:3000 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Deployment
+To deploy the Price Match application, follow the instructions below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-Choose a hosting platform to host the application. We used Heroku.
 
-### `npm run build` fails to minify
+-Create a new project or application on your hosting platform or locally.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-Follow the instructions provided by your hosting platform to deploy a React application.
+
+-Deploy the application to your hosting platform or locally.
+
+-The application should now be accessible at the URL provided by your hosting platform or http://localhost:3000 .
+
+
+## Built With
+React 
+CSS
+JavaScript
+Graphql
+Node.js
+AI Tools
++
+dependencies and devDependencies in package.json
+
+
+## Credits
+
+Harrison Tran-Chung (GitHub: htranchung)
+Tanvir Khondakar (GitHub: tanvirkhon)
+Ricardo Cisneros (GitHub: ricardoci)
+Raymond Stack-Vanasse (GitHub: Bright-Verdant)
