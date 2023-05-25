@@ -10,16 +10,20 @@ const Hero = () => {
         <div className="left-hero-container">
           <h1 className="title">
             PRICEMA <span>AI.</span>
-            <br />A TOOLKIT FOR ALL YOUR SHOPPING NEEDS
+            <br />A TOOLKIT FOR ALL YOUR ALL YOUR DATA ANALYSIS NEEDS
           </h1>
           <p className="subtitle">
-            Finally a tool to find the best price for all your shopping needs.
-            Simply, type the product you are looking and let Pricema AI do the
-            work for you.
+            Pricema AI allows you to analyze your data with ease. Simply, upload
+            your data, edit it, and let Pricema AI take it from there.
           </p>
+
           <button
             type="button"
-            onClick={() => window.open("http://localhost:3000/aichat")}
+            onClick={() =>
+              window.open(
+                " https://tanvirkhon-file-reader-app-y2jcf4.streamlit.app/"
+              )
+            }
             className="try-btn focus:outline-none font-medium rounded-3xl mr-3 md:mr-0">
             Try Pricema AI
           </button>
