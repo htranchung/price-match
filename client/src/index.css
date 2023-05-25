@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: "ai";
   src: url(assets/fonts/ai.ttf);
@@ -43,9 +44,104 @@ Heading Styles
   overflow: hidden;
 }
 
+
 .hoverButtons:hover {
   background-color: #5228f5;
   transition: background-color 0.4s, color 0.4s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.textArea {
+  resize: none;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 60px;
+  width: 95%;
+  white-space: nowrap;
+  overflow-x: auto;
+  border-radius: 10px;
+  resize: none;
+}
+
+.textArea::placeholder {
+  text-align: center;
+  font-size: 25px;
+}
+
+.containerProfile {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d3ff5;
+  text-align: center;
+}
+
+.profileCard {
+  width: 600px;
+  margin: 40px auto;
+  background-color: #eae2e2;
+  color: #444;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
+}
+
+.profileCard h1 {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-weight: 400;
+  background-color: black;
+}
+
+.profileBio {
+  position: relative;
+  margin: 20px;
+  line-height: 30px;
+}
+
+.profileImg {
+  float: left;
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .profileCard {
+    width: 90%;
+  }
+
+  .profileImg {
+    display: none;
+  }
+
+  .profileBio {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .profileCard {
+    width: 800px;
+    height: 300px;
+  }
+
+  .profileImg {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 55px;
+  }
+
+  .profileBio {
+    margin: 30px;
+    line-height: 36px;
+  }
 }
 
 /********************************************* 
@@ -60,6 +156,7 @@ Hero Section
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
   @media only screen and (max-width: 768px) {
     height: 100vh;
   }
@@ -71,6 +168,7 @@ Hero Section
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
@@ -87,6 +185,7 @@ Hero Section
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+
   @media only screen and (max-width: 768px) {
     padding-top: 100px;
     flex: 1;
@@ -98,6 +197,7 @@ Hero Section
   font-size: 50px;
   font-weight: 900;
   color: white;
+
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
@@ -115,6 +215,7 @@ Hero Section
   font-size: 20px;
   font-weight: 500;
   color: white;
+
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
@@ -144,6 +245,7 @@ Hero Section
   flex: 3;
   position: relative;
   overflow: hidden;
+
   @media only screen and (max-width: 768px) {
     flex: 2;
     width: 100%;
@@ -169,7 +271,8 @@ Team Section
   border: #201062e2 10px inset;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
-  transition: transform 2s ease-in-out; /* Animation */
+  transition: transform 2s ease-in-out;
+  /* Animation */
 }
 
 .team-card:hover {
@@ -326,7 +429,8 @@ How It Works Section
   max-width: 500px;
   max-height: 500px;
   padding-right: 20px;
-  transition: transform 2.5s ease-in-out; /* Animation */
+  transition: transform 2.5s ease-in-out;
+  /* Animation */
 }
 
 .ai-search-img:hover {
@@ -337,7 +441,8 @@ How It Works Section
   max-width: 500px;
   max-height: 500px;
   padding-left: 20px;
-  transition: transform 2.5s ease-in-out; /* Animation */
+  transition: transform 2.5s ease-in-out;
+  /* Animation */
 }
 
 .ai-chat-img:hover {
@@ -345,7 +450,8 @@ How It Works Section
 }
 
 .ai-analysis-img {
-  transition: transform 2.5s ease-in-out; /* Animation */
+  transition: transform 2.5s ease-in-out;
+  /* Animation */
 }
 
 .ai-analysis-img:hover {
@@ -498,6 +604,7 @@ Chat Box
   left: 0;
   right: 0;
 }
+
 .chat-box {
   flex: 1;
   background-color: #201062b9;

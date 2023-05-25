@@ -82,34 +82,36 @@ const ThoughtForm = () => {
   };
 
   return (
-    <div>
-      <h3>{isUpdatingThought ? 'Update Bio' : 'Add Bio'}</h3>
+    <div className='containerProfile'>
+      <h3 className='title text-4xl font-bold title-font mb-10 mt-10'>{isUpdatingThought ? 'Update Bio' : 'Add Bio'}</h3>
 
       {Auth.loggedIn() ? (
         <>
-          <p className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''}`}>
+          <h1 className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''}`}>
             Character Count: {characterCount}/280
-          </p>
+          </h1>
 
           <form
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleSubmit}
           >
             <div className="col-12 col-lg-9">
-              <textarea
+              <input
                 name="thoughtText"
-                placeholder="Bio..."
+                placeholder="Add Your Bio Here"
                 value={thoughtText}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="textArea mt-8"
                 onChange={handleChange}
-              ></textarea>
+              ></input>
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn bg-white btn-primary btn-block py-3" type="submit">
+              <button className="mt-3 text-white bg-black font-bold mr-4 py-4 px-10 rounded-full transform hover:scale-110 motion-reduce:transform-none" type="submit">
                 {isUpdatingThought ? 'Update BIO' : 'Add BIO'}
               </button>
+              <Link to="/"><button className="mt-5 mr-4 py-4 px-10 text-white bg-black font-bold rounded-full transform hover:scale-110 motion-reduce:transform-none" type="button">
+                Close
+              </button></Link>
             </div>
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">{error.message}</div>

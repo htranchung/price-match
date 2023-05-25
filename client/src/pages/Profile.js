@@ -38,10 +38,7 @@ const Profile = () => {
        <Navbar />
        
       <div className="flex-row bg-[#4d3ff5] bg-gradient-to-r from-#4d3ff5 to-gray-600  justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
-        </h2>
-
+        <div className="col-12 col-md-10 bg-dark text-light p-3 mb-5"></div>
         <div className=" text-white   col-12 col-md-10 mb-5  text-center">
           <ThoughtList
             thoughts={user.thoughts}

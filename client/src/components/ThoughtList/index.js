@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LogoOnly from "../../assets/LogoOnly.svg";
 
 const ThoughtList = ({
   thoughts,
@@ -8,7 +9,7 @@ const ThoughtList = ({
   showUsername = true,
 }) => {
   if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3 className='mb-10 title text-4xl font-bold title-font underline'>No Bio Card Yet</h3>;
   }
 
   return (
@@ -30,16 +31,18 @@ const ThoughtList = ({
                 </Link>
               ) : (
                 <>
-                  <span style={{ fontSize: '1rem' }}>
-                    Bio 
-                  </span>
+                  <div className='profileCard '>
+                    <h1 className='text-white'>
+                      {thought.thoughtAuthor}
+                    </h1>
+                    <img className='profileImg' alt='Logo' src={LogoOnly} />
+                    <p className='profileBio font-medium text-lg'>
+                      {thought.thoughtText}
+                    </p>
+                  </div>
                 </>
               )}
             </h4>
-            <div className="card-body bg-light p-2">
-              <p>{thought.thoughtText}</p>
-            </div>
-           
           </div>
         ))}
     </div>
