@@ -16,11 +16,11 @@ const HowItWorks = () => {
               HOW IT WORKS
             </h1>
             <p className="subtitle lg:w-2/3 mx-auto leading-relaxed text-base">
-              Pricema AI allows you to analyze and visualize your sales data
-              with ease. Simply start by uploading the data into our price
-              visualization tool. From their you can Fine tune your data further
-              or simply chat with Pricema AI about your data. From there you can
-              have Price AI analyze and visualize your data for you.
+              Pricema AI enables you to analyze and visualize your sales data
+              effortlessly. Begin by uploading the data to our price
+              visualization tool. From there, you can refine your data or engage
+              in a conversation with Pricema AI about it. Then, let Price AI
+              analyze and visualize your data for you.
             </p>
           </div>
 
@@ -28,9 +28,9 @@ const HowItWorks = () => {
             <div className="card-info-section p-4 lg:w-1/2">
               <h2 className="card-heading">Visualize your Data</h2>
               <p className="card-text">
-                Upload your data into Pricema's data visualization tool and fine
-                tune your data. When you are done simply download your updated
-                data set and take it to Pricema chat to talk with your data.
+                Upload your data to Pricema's data visualization tool and refine
+                it. Once you're done, download your updated dataset and bring it
+                to Pricema chat for a conversation with your data.
               </p>
               <a
                 href="https://tanvirkhon-xcel-editor-app-gih7s1.streamlit.app/
@@ -51,10 +51,9 @@ const HowItWorks = () => {
               <div>
                 <h2 className="ai-chat-heading">Pricema Chat</h2>
                 <p className="ai-chat-text">
-                  Engage in natural and engaging conversations with your data.
-                  Our AI Chat feature, allows you to chat with your data with
-                  ease. Simply upload your data file, and start chatting with
-                  Pricema AI.
+                  Engage in natural and interactive conversations with your data
+                  using our AI Chat feature. Easily upload your data file and
+                  start conversing with Pricema AI.
                 </p>
                 <button
                   type="button"
@@ -74,11 +73,11 @@ const HowItWorks = () => {
               <div>
                 <h2 className="analysis-heading">Pricema Analysis</h2>
                 <p className="analysis-text">
-                  Ready to take you data analysis to the next level? Our
-                  advanced AI analysis technology leverages cutting-edge
+                  Are you ready to elevate your data analysis to new heights?
+                  Our advanced AI analysis technology utilizes state-of-the-art
                   algorithms to process and extract valuable insights from
-                  complex data sets, empowering you to make data-driven
-                  decisions with speed and accuracy.
+                  intricate data sets. This empowers you to make data-driven
+                  decisions swiftly and accurately.
                 </p>
                 <Link to="/Payment">
                   <button className="ai-analysis-btn">AI Analysis</button>

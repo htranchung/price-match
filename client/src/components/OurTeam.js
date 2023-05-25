@@ -40,16 +40,26 @@ const OurTeam = () => {
                   </h2>
                   <h3 className="mb-3">UX Designer/Developer</h3>
                   <p className="mb-4">
-                  Harrison is a proud graduate of the University of Minnesota's Full-Stack Web Development Program. Equipped with a strong foundation in Front-End and Back-End development, Harrison is skilled in HTML, CSS, JavaScript, and frameworks such as React and Node.js. With a passion for creating seamless online experiences, Harrison brings expertise in API integration, and responsive design principles to contribute to innovative web development projects.
+                    Harrison is a proud graduate of the University of
+                    Minnesota's Full-Stack Web Development Program. Equipped
+                    with a strong foundation in Front-End and Back-End
+                    development, Harrison is skilled in HTML, CSS, JavaScript,
+                    and frameworks such as React and Node.js. With a passion for
+                    creating seamless online experiences, Harrison brings
+                    expertise in API integration, and responsive design
+                    principles to contribute to innovative web development
+                    projects.
                   </p>
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
                       href="https://github.com/htranchung">
-                      <img src={Github} alt="Github"/>
+                      <img src={Github} alt="Github" />
                     </a>
-                    <a className="links flex" href="https://www.linkedin.com/in/harrison-tran-chung-1910b01b5/">
-                      <img src={Linkedin} alt="LinkedIn"/>
+                    <a
+                      className="links flex"
+                      href="https://www.linkedin.com/in/harrison-tran-chung-1910b01b5/">
+                      <img src={Linkedin} alt="LinkedIn" />
                     </a>
                   </span>
                 </div>
@@ -71,19 +81,22 @@ const OurTeam = () => {
                   <p className="mb-4 ">
                     Tanvir is a recent graduate of the University of Minnesota
                     Full-Stack Web Development program. He has a passion for
-                    web-design, blockchain technology, and AI development.
+                    web-design, blockchain technology, and AI application
+                    development.
                   </p>
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
                       href="https://github.com/tanvirkhon">
-                      <img src={Github} alt="Github"/>
+                      <img src={Github} alt="Github" />
                     </a>
                     <a className="links flex" href="https://tanvir.digital/">
-                      <img src={Website} alt="Website"/>
+                      <img src={Website} alt="Website" />
                     </a>
-                    <a className="links flex" href="https://www.linkedin.com/in/tanvirkhondakar/">
-                      <img src={Linkedin} alt="LinkedIn"/>
+                    <a
+                      className="links flex"
+                      href="https://www.linkedin.com/in/tanvirkhondakar/">
+                      <img src={Linkedin} alt="LinkedIn" />
                     </a>
                   </span>
                 </div>
@@ -103,19 +116,28 @@ const OurTeam = () => {
                   </h2>
                   <h3 className="mb-3">UX Designer/Developer</h3>
                   <p className="mb-4">
-                  Full Stack Developer who is passionate about continuously expanding my skill set and keeping up-to-date with the latest technologies. Knowledgeable of backend and frontend development requirements. Handles any part of process with ease. Collaborative team player with excellent technical abilities with lots of on hand experience.
+                    Full Stack Developer who is passionate about continuously
+                    expanding my skill set and keeping up-to-date with the
+                    latest technologies. Knowledgeable of backend and frontend
+                    development requirements. Handles any part of process with
+                    ease. Collaborative team player with excellent technical
+                    abilities with lots of on hand experience.
                   </p>
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
                       href="https://github.com/ricardoci">
-                      <img src={Github} alt="Github"/>
+                      <img src={Github} alt="Github" />
                     </a>
-                    <a className="links flex" href="https://reactportfolio22.herokuapp.com/">
-                      <img src={Website} alt="Website"/>
+                    <a
+                      className="links flex"
+                      href="https://reactportfolio22.herokuapp.com/">
+                      <img src={Website} alt="Website" />
                     </a>
-                    <a className="links flex" href="https://www.linkedin.com/in/ricardo-cisneros-5b8b3024b">
-                      <img src={Linkedin} alt="LinkedIn"/>
+                    <a
+                      className="links flex"
+                      href="https://www.linkedin.com/in/ricardo-cisneros-5b8b3024b">
+                      <img src={Linkedin} alt="LinkedIn" />
                     </a>
                   </span>
                 </div>
@@ -134,16 +156,18 @@ const OurTeam = () => {
                   </h2>
                   <h3 className="mb-3">UX Designer/Developer</h3>
                   <p className="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                    Graduate of the University of Minnesota Full-Stack Web
+                    Development program.
                   </p>
                   <span className="inline-flex items-center">
                     <a
                       className="links github-link flex"
                       href="https://github.com/Bright-Verdant">
-                      <img src={Github} alt="Github"/>
+                      <img src={Github} alt="Github" />
                     </a>
-                    <a className="links flex" href="https://www.linkedin.com/in/raymond-stack-vanasse-870164128/">
+                    <a
+                      className="links flex"
+                      href="https://www.linkedin.com/in/raymond-stack-vanasse-870164128/">
                       <img src={Linkedin} alt="LinkedIn" />
                     </a>
                   </span>
