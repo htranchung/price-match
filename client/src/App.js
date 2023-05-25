@@ -19,6 +19,8 @@ import SingleThought from './pages/SingleThought';
 // new
 import Payment from "./components/StripePayment/Payment";
 import Completion from "./components/StripePayment/Completion";
+import HowItWorks from "./components/HowItWorks";
+import OurTeam from "./components/OurTeam";
 // 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -61,6 +63,10 @@ const App = () => {
                 path="/thoughts/:thoughtId"
                 element={<SingleThought />}
               />
+
+              {/* <Route path="/HowItWorks" element={<HowItWorks />} />
+              <Route path="/OurTeam" element={<OurTeam />} /> */}
+
             <Route path="/Aichat" element={<Aichat />} />
             <Route path="/Signup" element={<Signup />} />
 
