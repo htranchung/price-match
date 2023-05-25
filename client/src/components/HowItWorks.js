@@ -26,7 +26,7 @@ const HowItWorks = () => {
 
           <div className="simple-search-card flex flex-wrap -m-4">
             <div className="card-info-section p-4 lg:w-1/2">
-              <h2 className="card-heading">visualization your Data</h2>
+              <h2 className="card-heading">Visualization Your Data</h2>
               <p className="card-text">
                 Upload your data into Pricema's data visualization tool and fine
                 tune your data. When you are done simply download your updated
