@@ -3,6 +3,7 @@ import Lottie from "lottie-react";
 import animationData from "../assets/Ai-Search.json";
 import animationData2 from "../assets/Ai-Chat.json";
 import animationData3 from "../assets/AI-Analysis.json";
+import { Link } from "react-router-dom";
 
 const HowItWorks = () => {
   return (
@@ -61,7 +62,9 @@ const HowItWorks = () => {
                 <p className="analysis-text">
                   Our advanced AI analysis technology leverages cutting-edge algorithms to process and extract valuable insights from complex data sets, empowering businesses to make data-driven decisions with speed and accuracy.
                 </p>
-                <button className="ai-analysis-btn">AI Analysis</button>
+                <Link to="/Payment">
+                  <button className="ai-analysis-btn">AI Analysis</button>
+                </Link>
               </div>
               <Lottie className="ai-analysis-img" animationData={animationData2} />
             </div>

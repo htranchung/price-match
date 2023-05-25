@@ -1,7 +1,7 @@
 import { PaymentElement } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
-import './Form.css';
+// import './Form.css';
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -39,15 +39,55 @@ export default function CheckoutForm() {
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <PaymentElement id="payment-element" />
-      <button disabled={isProcessing || !stripe || !elements} id="submit">
-        <span id="button-text">
-          {isProcessing ? "Processing ... " : "Pay now"}
-        </span>
-      </button>
-      {/* Show any error or success messages */}
-      {message && <div id="payment-message">{message}</div>}
-    </form>
+    
+      <form
+        id="payment-form"
+        onSubmit={handleSubmit}
+        style={{
+          background: 'linear-gradient(to bottom left, #3b1f46, #291d2d)',
+          // border: 'solid #f6f9fc 1px',
+          borderRadius: 'var(--radius)',
+          padding: '20px',
+          margin: '20px 0',
+          boxShadow: '0 30px 50px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3)',
+          margin: '20px auto', // Center the form horizontally
+        maxWidth: '400px', // Adjust the maximum width as needed
+        }}
+      >
+        <PaymentElement id="payment-element" />
+        <button
+          disabled={isProcessing || !stripe || !elements}
+          id="submit"
+          style={{
+            backgroundColor: 'var(--accent-color)',
+            borderRadius: 'var(--radius)',
+            color: 'white',
+            border: '0',
+            padding: '12px 16px',
+            marginTop: '16px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            transition: 'all 0.2s ease',
+            display: 'block',
+          }}
+        >
+          <span id="button-text">
+            {isProcessing ? 'Processing ... ' : 'Pay now'}
+          </span>
+        </button>
+        {message && (
+          <div
+            id="payment-message"
+            style={{
+              fontFamily: 'source-code-pro, Menlo, Monaco, Consolas, "Courier New"',
+              display: 'none',
+              /* ...other styles... */
+            }}
+          >
+            {message}
+          </div>
+        )}
+      </form>
+   
   );
-}
+ }  
